@@ -3,13 +3,12 @@
 
     angular
         .module('ivan')
-        .controller('LoginController', LoginController);
+        .controller('StartController', StartController);
 
     /** @ngInject */
-    function LoginController($http, $state) {
+    function StartController($http, $state) {
         var vm = this;
 
         //Methods
-        console.log('$http', $http);
     }
 })();

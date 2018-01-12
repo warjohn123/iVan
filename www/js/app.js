@@ -4,47 +4,44 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('ivan', [
-  'ionic',
-  'ngRoute'
-  ])
+    'ionic',
+    'ngRoute'
+])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    .run(function ($ionicPlatform, $rootScope, $location) {
+        $rootScope.location = $location
+        $ionicPlatform.ready(function () {
+            if (window.cordova && window.cordova.plugins.Keyboard) {
+                // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+                // for form inputs)
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
-      cordova.plugins.Keyboard.disableScroll(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
-})
+                // Don't remove this line unless you know what you are doing. It stops the viewport
+                // from snapping when text inputs are focused. Ionic handles this internally for
+                // a much nicer keyboard experience.
+                cordova.plugins.Keyboard.disableScroll(true);
+            }
+            if (window.StatusBar) {
+                StatusBar.styleDefault();
+            }
+        });
+    })
 
-.config(function ($routeProvider) {
-    $routeProvider
-            // .when('/', {
-            //     controller: 'HomeController',
-            //     templateUrl: 'home/home.view.html',
-            //     controllerAs: 'vm'
-            // })
+    .config(function ($stateProvider, $urlRouterProvider) {
 
-            .when('/login', {
-                controller: 'LoginController',
-                templateUrl: 'js/login/login.html',
+        $urlRouterProvider.otherwise('/');
+
+        $stateProvider
+            .state('start', {
+                url: '/',
+                templateUrl: 'js/start/start.html',
+                controller: 'StartController',
                 controllerAs: 'vm'
             })
-
-            // .when('/register', {
-            //     controller: 'RegisterController',
-            //     templateUrl: 'register/register.view.html',
-            //     controllerAs: 'vm'
-            // })
-
-            .otherwise({ redirectTo: '/login' });
-  });
+            .state('login', {
+                url: '/login',
+                templateUrl: 'js/login/login.html',
+                controller: 'LoginController',
+                controllerAs: 'vm'
+            });
+    });
