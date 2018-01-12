@@ -10,6 +10,7 @@ angular.module('ivan', [
 
     .run(function ($ionicPlatform, $rootScope, $location) {
         $rootScope.location = $location
+        $rootScope.platform = ionic.Platform.platform();
         $ionicPlatform.ready(function () {
             if (window.cordova && window.cordova.plugins.Keyboard) {
                 // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -42,6 +43,12 @@ angular.module('ivan', [
                 url: '/login',
                 templateUrl: 'js/login/login.html',
                 controller: 'LoginController',
+                controllerAs: 'vm'
+            })
+            .state('register', {
+                url: '/register',
+                templateUrl: 'js/register/register.html',
+                controller: 'RegisterController',
                 controllerAs: 'vm'
             });
     });

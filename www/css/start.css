@@ -1,8 +1,17 @@
 .start-container {
     text-align: center;
+    margin-top: 10%;
 }
 
-.sign-in {
+.align-center {
     justify-content: center;
     align-items: center;
+}
+
+.mt-30 {
+	margin-top: 30px !important;
+}
+
+.app-title {
+	color: #567;
 }

@@ -3,10 +3,10 @@
 
     angular
         .module('ivan')
-        .controller('LoginController', LoginController);
+        .controller('RegisterController', RegisterController);
 
     /** @ngInject */
-    function LoginController($http, $state) {
+    function RegisterController($http, $state) {
         var vm = this;
 
         //Methods
