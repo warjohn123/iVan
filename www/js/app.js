@@ -50,5 +50,23 @@ angular.module('ivan', [
                 templateUrl: 'js/register/register.html',
                 controller: 'RegisterController',
                 controllerAs: 'vm'
+            })
+            .state('user-selection', { //down all for user selection routes
+                url: '/user-selection',
+                templateUrl: 'js/user-selection/user-selection.html',
+                controller: 'UserSelectionController',
+                controllerAs: 'vm'
+            })
+            .state('ride-van', {
+                url: '/ride-van',
+                templateUrl: 'js/user-selection/ride-van/ride-van.html',
+                controller: 'RideVanController',
+                controllerAs: 'vm'
+            })
+            .state('search-list', {
+                url: '/search-list',
+                templateUrl: 'js/user-selection/ride-van/search-list/search-list.html',
+                controller: 'SearchListController',
+                controllerAs: 'vm'
             });
     });

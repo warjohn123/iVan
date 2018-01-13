@@ -18,8 +18,6 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/login.css" rel="stylesheet">
-    <link href="css/start.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -38,13 +36,22 @@
     <script src="js/login/login.controller.js"></script>
     <script src="js/start/start.controller.js"></script>
     <script src="js/register/register.controller.js"></script>
+    <script src="js/user-selection/user-selection.controller.js"></script>
+    <script src="js/user-selection/ride-van/ride-van.controller.js"></script>
+    <script src="js/user-selection/ride-van/search-list/search-list.controller.js"></script>
 
   </head>
   <body ng-app="ivan">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable" ng-show="location.path() != '/'">
-        <h1 class="title">iVan</h1>
+      <ion-header-bar class="bar-stable"
+                      ng-show="location.path() == '/user-selection'
+                      || location.path() == '/admin-selection'
+                      || location.path() == '/search-list'">
+        <h1 class="title">Hi! User</h1>
+      </ion-header-bar>
+      <ion-header-bar class="bar-stable" ng-show="location.path() == '/ride-van'">
+        <h1 class="title">Immediate Booking</h1>
       </ion-header-bar>
       <ion-content>
         <div ui-view></div>

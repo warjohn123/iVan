@@ -1,1 +1,22 @@
 /* Empty. Add your own CSS if you like */
+.center-container {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.mt-10-percent {
+    margin-top: 10%;
+}
+
+.align-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.app-title {
+    color: #567;
+}
