@@ -68,5 +68,23 @@ angular.module('ivan', [
                 templateUrl: 'js/user-selection/ride-van/search-list/search-list.html',
                 controller: 'SearchListController',
                 controllerAs: 'vm'
+            })
+            .state('search-route', {
+                url: '/search-route',
+                templateUrl: 'js/user-selection/search-route/search-route.html',
+                controller: 'SearchRouteController',
+                controllerAs: 'vm'
+            })
+            .state('admin-selection', {
+                url: '/admin-selection',
+                templateUrl: 'js/admin-selection/admin-selection.html',
+                controller: 'AdminSelectionController',
+                controllerAs: 'vm'
+            })
+            .state('view-route', {
+                url: '/view-route',
+                templateUrl: 'js/admin-selection/view-route/view-route.html',
+                controller: 'AdminSelectionController',
+                controllerAs: 'vm'
             });
     });

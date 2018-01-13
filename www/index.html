@@ -36,9 +36,16 @@
     <script src="js/login/login.controller.js"></script>
     <script src="js/start/start.controller.js"></script>
     <script src="js/register/register.controller.js"></script>
+
     <script src="js/user-selection/user-selection.controller.js"></script>
+
     <script src="js/user-selection/ride-van/ride-van.controller.js"></script>
     <script src="js/user-selection/ride-van/search-list/search-list.controller.js"></script>
+
+    <script src="js/user-selection/search-route/search-route.controller.js"></script>
+
+    <script src="js/admin-selection/admin-selection.controller.js"></script>
+    <script src="js/admin-selection/view-route/view-route.controller.js"></script>
 
   </head>
   <body ng-app="ivan">
@@ -47,13 +54,15 @@
       <ion-header-bar class="bar-stable"
                       ng-show="location.path() == '/user-selection'
                       || location.path() == '/admin-selection'
-                      || location.path() == '/search-list'">
+                      || location.path() == '/search-list'
+                      || location.path() == '/view-route'
+                      || location.path() == '/search-route'">
         <h1 class="title">Hi! User</h1>
       </ion-header-bar>
       <ion-header-bar class="bar-stable" ng-show="location.path() == '/ride-van'">
         <h1 class="title">Immediate Booking</h1>
       </ion-header-bar>
-      <ion-content>
+      <ion-content class="mt-15-percent">
         <div ui-view></div>
       </ion-content>
     </ion-pane>

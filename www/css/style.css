@@ -8,6 +8,10 @@
     margin-top: 10%;
 }
 
+.mt-15-percent {
+    margin-top: 15%;
+}
+
 .align-center {
     justify-content: center;
     align-items: center;

@@ -17,6 +17,8 @@
         function login(credentials) {
             if(credentials.contact === 'user') {
                 $state.go('user-selection');
+            } else if(credentials.contact === 'admin') {
+                $state.go('admin-selection');
             }
         }
     }
