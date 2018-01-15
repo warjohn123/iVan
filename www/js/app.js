@@ -86,5 +86,11 @@ angular.module('ivan', [
                 templateUrl: 'js/admin-selection/view-route/view-route.html',
                 controller: 'AdminSelectionController',
                 controllerAs: 'vm'
+            })
+            .state('create-route', {
+                url: '/create-route',
+                templateUrl: 'js/admin-selection/create-route/create-route.html',
+                controller: 'CreateRouteController',
+                controllerAs: 'vm'
             });
     });

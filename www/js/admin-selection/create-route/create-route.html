@@ -1,0 +1,22 @@
+<div class="mt-10-percent">
+
+    <form ng-submit="vm.create(vm.location)" novalidate>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">From</span>
+                <input name="contact" type="text" required ng-model="vm.location.from">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Where</span>
+                <input name="password" type="text" required
+                       ng-model="vm.location.where">
+            </label>
+        </div>
+
+        <div class="row align-center login-button">
+            <button class="button col-33 col-center col button-positive">
+                Create
+            </button>
+        </div>
+    </form>
+</div>
