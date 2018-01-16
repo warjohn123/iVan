@@ -1,28 +1,22 @@
-<ion-view>
-    <ion-content>
+<div class="mt-10-percent">
 
-        <div class="mt-10-percent">
-
-            <form ng-submit="vm.book(vm.location)" novalidate>
-                <div class="list">
-                    <label class="item item-input">
-                        <span class="input-label">From</span>
-                        <input name="contact" type="text" required
-                               ng-model="vm.location.from">
-                    </label>
-                    <label class="item item-input">
-                        <span class="input-label">Where</span>
-                        <input name="password" type="text" required
-                               ng-model="vm.location.where">
-                    </label>
-                </div>
-
-                <div class="row align-center login-button">
-                    <button class="button col-33 col-center col button-positive">
-                        Book
-                    </button>
-                </div>
-            </form>
+    <form ng-submit="vm.book(vm.location)" novalidate>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">From</span>
+                <input name="contact" type="text" required ng-model="vm.location.from">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Where</span>
+                <input name="password" type="text" required
+                       ng-model="vm.location.where">
+            </label>
         </div>
-    </ion-content>
-</ion-view>
+
+        <div class="row align-center login-button">
+            <button class="button col-33 col-center col button-positive">
+                Book
+            </button>
+        </div>
+    </form>
+</div>
