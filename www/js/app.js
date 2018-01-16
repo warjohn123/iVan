@@ -9,7 +9,7 @@ angular.module('ivan', [
 ])
 
     .run(function ($ionicPlatform, $rootScope, $location) {
-        $rootScope.location = $location
+        $rootScope.location = $location;
         $rootScope.platform = ionic.Platform.platform();
         $ionicPlatform.ready(function () {
             if (window.cordova && window.cordova.plugins.Keyboard) {

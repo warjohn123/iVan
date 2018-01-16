@@ -1,26 +1,31 @@
-
-    <div class="row align-center">
-        <h2 class="app-title">
-            IVAN
-        </h2>
-    </div>
-
-    <form ng-submit="vm.login(vm.credentials)" novalidate>
-        <div class="list">
-            <label class="item item-input">
-                <span class="input-label">Contact No.</span>
-                <input name="contact" type="text" required ng-model="vm.credentials.contact">
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Password</span>
-                <input name="password" type="password" required
-                       ng-model="vm.credentials.password">
-            </label>
+<ion-view>
+    <ion-content>
+        <div class="row align-center">
+            <h2 class="app-title">
+                IVAN
+            </h2>
         </div>
 
-        <div class="row align-center login-button">
-            <button class="button col-33 col-center col button-positive">
-                Submit
-            </button>
-        </div>
-    </form>
+        <form ng-submit="vm.login(vm.credentials)" novalidate>
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Contact No.</span>
+                    <input name="contact" type="text" required
+                           ng-model="vm.credentials.contact">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input name="password" type="password" required
+                           ng-model="vm.credentials.password">
+                </label>
+            </div>
+
+            <div class="row align-center login-button">
+                <button class="button col-33 col-center col button-positive">
+                    Submit
+                </button>
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>
