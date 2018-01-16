@@ -29,9 +29,6 @@ angular.module('ivan', [
     })
 
     .config(function ($stateProvider, $urlRouterProvider) {
-
-        $urlRouterProvider.otherwise('/');
-
         $stateProvider
             .state('start', {
                 url: '/',
@@ -93,4 +90,6 @@ angular.module('ivan', [
                 controller: 'CreateRouteController',
                 controllerAs: 'vm'
             });
+
+        $urlRouterProvider.otherwise('/');
     });
